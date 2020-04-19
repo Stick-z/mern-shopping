@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use("/api/items", itemRouter);
 
 //serve static assets if in production
-if (process.env.NODE_ENV === "produvtion") {
+if (process.env.NODE_ENV === "production") {
   //Set static folder
   app.use(express.static("client/build"));
   app.get("*", (req, res) => {
